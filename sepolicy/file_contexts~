@@ -1,0 +1,5 @@
+/sys/devices/f9927000.i2c/i2c-5/5-005d/wakeup_gesture	u:object_r:touchtune_sysfs:s0
+/sys/devices/f9927000.i2c/i2c-5/5-005d/touch_key_array	u:object_r:touchtune_sysfs:s0
+/sys/devices/f9927000.i2c/i2c-5/5-005d/keys_enabled	u:object_r:touchtune_sysfs:s0
+/sys/devices/f9927000.i2c/i2c-5/5-005d/palm2sleep       u:object_r:touchtune_sysfs:s0
+
