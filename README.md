@@ -3,6 +3,7 @@
 cm-13.0 roomservice.xml
 
 <?xml version="1.0" encoding="UTF-8"?>
+```xml
 <manifest>
   <project name="heweizhe/android_device_nubia_nx507j" path="device/nubia/nx507j" remote="github" />
   <project name="heweizhe/android_vendor_nubia_nx507j" path="vendor/nubia/nx507j" remote="github" />
@@ -12,3 +13,4 @@ cm-13.0 roomservice.xml
   <project name="CyanogenMod/android_external_stlport" path="external/stlport" remote="github" />
   <project name="CyanogenMod/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="github" />
 </manifest>
+```
