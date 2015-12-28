@@ -125,9 +125,11 @@ PRODUCT_PACKAGES += \
     libnl_2 \
     libbson
 
-# Filesystem
+# Filesystem management tools
 PRODUCT_PACKAGES += \
-    make_ext4fs 
+    e2fsck \
+    make_ext4fs \
+    setup_fs
 
 # FM
 #PRODUCT_PACKAGES += \
@@ -256,6 +258,10 @@ PRODUCT_PACKAGES += \
     wpa_supplicant_overlay.conf \
     p2p_supplicant_overlay.conf 
 
+# Keyhandler
+PRODUCT_PACKAGES += \
+    com.cyanogenmod.keyhandler
+
 # ANT+
 PRODUCT_PACKAGES += \
     libantradio \
@@ -339,3 +345,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/etc/telephony/NX512J_Z0-1.xml:system/etc/telephony/NX512J_Z0-1.xml \
     $(LOCAL_PATH)/etc/telephony/NX512J_Z78-1.xml:system/etc/telephony/NX512J_Z78-1.xml \
     $(LOCAL_PATH)/etc/telephony/NX513J_Z78-1.xml:system/etc/telephony/NX513J_Z78-1.xml
+
+# IO Scheduler
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.io.scheduler=bfq
+
+PRODUCT_SYSTEM_SERVER_JARS += com.cyanogenmod.keyhandler
+# never dexopt the keyhandler
+$(call add-product-dex-preopt-module-config,com.cyanogenmod.keyhandler,disable)
