@@ -2,8 +2,3 @@
 
 country="$(getprop persist.sys.country)"
 setprop ro.build.target_country $country
-<<<<<<< HEAD
-=======
-
-echo 1 > /sys/devices/f9924000.i2c/i2c-2/2-005d/wakeup_gesture
->>>>>>> f3d8e0defdc8d89e7e5f82a785ff314dbfb64ea5

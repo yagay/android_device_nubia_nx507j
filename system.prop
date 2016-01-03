@@ -22,11 +22,7 @@ ro.ril.enable.amr.wideband=1
 DEVICE_PROVISIONED=1
 persist.radio.rat_on=combine
 persist.radio.multisim.config=dsds
-<<<<<<< HEAD
 ro.telephony.default_network=22,1
-=======
-ro.telephony.default_network=10
->>>>>>> f3d8e0defdc8d89e7e5f82a785ff314dbfb64ea5
 ro.telephony.default_cdma_sub=0
 ro.ril.force_eri_from_xml=true
 persist.radio.apm_sim_not_pwdn=1
@@ -94,11 +90,8 @@ ro.qualcomm.cabl=0
 # System props for telephony
 # System prop to turn on CdmaLTEPhone always
 telephony.lteOnCdmaDevice=1
-<<<<<<< HEAD
 ril.ecclist=112,911,110,122,119,120,000,118
 ril.ecclist1=112,911,110,122,119,120,000,118
-=======
->>>>>>> f3d8e0defdc8d89e7e5f82a785ff314dbfb64ea5
 
 #
 # System props for bluetooth

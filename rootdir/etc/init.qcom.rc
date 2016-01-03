@@ -418,13 +418,8 @@ on boot
     write /proc/sys/net/netfilter/nf_conntrack_tcp_be_liberal 1
 
     # NFC local data and nfcee xml storage
-<<<<<<< HEAD
     # mkdir /data/nfc 0770 nfc nfc
     # mkdir /data/nfc/param 0770 nfc nfc
-=======
-    mkdir /data/nfc 0770 nfc nfc
-    mkdir /data/nfc/param 0770 nfc nfc
->>>>>>> f3d8e0defdc8d89e7e5f82a785ff314dbfb64ea5
 
     # Set the console loglevel to < KERN_INFO
     # Set the default message loglevel to KERN_INFO
@@ -454,10 +449,7 @@ on post-fs-data
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     chown dhcp dhcp /data/misc/dhcp
 
-<<<<<<< HEAD
 
-=======
->>>>>>> f3d8e0defdc8d89e7e5f82a785ff314dbfb64ea5
     # Create the directories used by CnE subsystem
     mkdir /data/connectivity 0771 system system
     chown system system /data/connectivity
@@ -539,10 +531,7 @@ service usbhub_init /system/bin/usbhub_init
    disabled
    oneshot
 
-<<<<<<< HEAD
 
-=======
->>>>>>> f3d8e0defdc8d89e7e5f82a785ff314dbfb64ea5
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
 
@@ -702,10 +691,7 @@ service ftmd /system/bin/logwrapper /system/bin/ftmdaemon
     disabled
     oneshot
 
-<<<<<<< HEAD
 
-=======
->>>>>>> f3d8e0defdc8d89e7e5f82a785ff314dbfb64ea5
 # QMUX must be in multiple groups to support external process connections
 service qmuxd /system/bin/qmuxd
     class main

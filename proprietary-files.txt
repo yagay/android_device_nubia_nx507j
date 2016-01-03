@@ -71,10 +71,6 @@ etc/firmware/leia_pm4_470.fw
 etc/firmware/a225p5_pm4.fw
 etc/firmware/a225_pfp.fw
 etc/firmware/a225_pm4.fw
-<<<<<<< HEAD
-=======
-etc/firmware/cyttsp4_fw.bin
->>>>>>> f3d8e0defdc8d89e7e5f82a785ff314dbfb64ea5
 etc/firmware/venus.b00
 etc/firmware/venus.b01
 etc/firmware/venus.b02
@@ -217,10 +213,7 @@ vendor/lib/libbtnv.so
 vendor/lib/libC2D2.so
 vendor/lib/libc2d30-a3xx.so
 vendor/lib/libc2d30-a4xx.so
-<<<<<<< HEAD
 vendor/lib/libc2d30.so
-=======
->>>>>>> f3d8e0defdc8d89e7e5f82a785ff314dbfb64ea5
 vendor/lib/libCB.so
 vendor/lib/libchromatix_imx132_common.so
 vendor/lib/libchromatix_imx132_default_video.so

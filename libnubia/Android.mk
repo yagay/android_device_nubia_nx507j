@@ -17,11 +17,7 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
-<<<<<<< HEAD
     nubia.cpp
-=======
-    nubia_ril.cpp
->>>>>>> f3d8e0defdc8d89e7e5f82a785ff314dbfb64ea5
 
 LOCAL_SHARED_LIBRARIES := libbinder
 

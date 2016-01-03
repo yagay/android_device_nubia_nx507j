@@ -151,14 +151,9 @@
     <!-- The RadioAccessFamilies supported by the device.
          Empty is viewed as "all". Only used on devices which
          don't support RIL_REQUEST_GET_RADIO_CAPABILITY
-<<<<<<< HEAD
          format is UMTS|LTE|... 
     <string translatable="false" name="config_radio_access_family">GPRS|EDGE|UMTS|HSDPA|HSUPA|HSPA|LTE|HSPAP|GSM|TD_SCDMA|WCDMA|LTE_CA</string> -->
     <string translatable="false" name="config_radio_access_family">GPRS|EDGE|UMTS|IS95A|IS95B|1XRTT|EVDO_0|EVDO_A|HSDPA|HSUPA|HSPA|EVDO_B|EHRPD|LTE|HSPAP|GSM|TD_SCDMA|HS|CDMA|EVDO|WCDMA</string>
-=======
-         format is UMTS|LTE|... -->
-    <string translatable="false" name="config_radio_access_family">GPRS|EDGE|UMTS|HSDPA|HSUPA|HSPA|LTE|HSPAP|GSM|TD_SCDMA|WCDMA|LTE_CA</string>
->>>>>>> f3d8e0defdc8d89e7e5f82a785ff314dbfb64ea5
 
     <!-- If the DUN connection for this CDMA device supports more than just DUN -->
     <!-- traffic you should list them here. -->
@@ -270,11 +265,7 @@
 
     <!-- Indicate whether closing the lid causes the device to go to sleep and opening
          it causes the device to wake up.
-<<<<<<< HEAD
          The default is false.
-=======
-         The default is false. 
->>>>>>> f3d8e0defdc8d89e7e5f82a785ff314dbfb64ea5
     <bool name="config_lidControlsSleep">true</bool> -->
 
     <!-- Boolean indicating whether Softap requires reloading AP firmware 
@@ -368,13 +359,8 @@
          due to the proximity sensor.  This resource should only be set to true
          if the sensor HAL correctly handles the proximity sensor as a wake-up source.
          Otherwise, the device may fail to wake out of suspend reliably.
-<<<<<<< HEAD
          The default is false. -->
     <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
-=======
-         The default is false. 
-    <bool name="config_suspendWhenScreenOffDueToProximity">true</bool> -->
->>>>>>> f3d8e0defdc8d89e7e5f82a785ff314dbfb64ea5
 
     <!-- Indicate whether the SD card is accessible without removing the battery. -->
     <bool name="config_batterySdCardAccessibility">true</bool>

@@ -4,13 +4,8 @@
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
 /dev/block/platform/msm_sdcc.1/by-name/system       /system         ext4    ro,barrier=1,noatime                                		wait
-<<<<<<< HEAD
 /dev/block/platform/msm_sdcc.1/by-name/userdata     /data           ext4    noatime,nosuid,nodev,barrier=1,noauto_da_alloc,errors=continue,journal_async_commit     wait,check,formattable,encryptable=footer
 /dev/block/platform/msm_sdcc.1/by-name/cache        /cache          ext4    noatime,nosuid,nodev,barrier=1,noauto_da_alloc,errors=continue,journal_async_commit     wait,check,formattable
-=======
-/dev/block/platform/msm_sdcc.1/by-name/userdata     /data           ext4    noatime,nosuid,nodev,barrier=1,noauto_da_alloc,errors=continue      wait,check,formattable,encryptable=footer
-/dev/block/platform/msm_sdcc.1/by-name/cache        /cache          ext4    noatime,nosuid,nodev,barrier=1					wait,check,formattable
->>>>>>> f3d8e0defdc8d89e7e5f82a785ff314dbfb64ea5
 /dev/block/platform/msm_sdcc.1/by-name/persist      /persist        ext4    nosuid,nodev,barrier=1  						wait
 /dev/block/platform/msm_sdcc.1/by-name/modem        /firmware       vfat    defaults        defaults
 /dev/block/platform/msm_sdcc.1/by-name/boot         /boot           emmc    defaults        recoveryonly

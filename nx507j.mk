@@ -88,11 +88,7 @@ PRODUCT_PACKAGES += \
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
-<<<<<<< HEAD
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
-=======
-    $(LOCAL_PATH)/audio/audio_effects.conf:system/etc/audio_effects.conf \
->>>>>>> f3d8e0defdc8d89e7e5f82a785ff314dbfb64ea5
     $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml
@@ -129,7 +125,6 @@ PRODUCT_PACKAGES += \
     libnl_2 \
     libbson
 
-<<<<<<< HEAD
 # Filesystem
 PRODUCT_PACKAGES += \
     make_ext4fs 
@@ -141,21 +136,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.fm.transmitter=false
-=======
-# Filesystem management tools
-PRODUCT_PACKAGES += \
-    e2fsck \
-    make_ext4fs \
-    setup_fs
-
-# FM
-#PRODUCT_PACKAGES += \
-#    FM2 \
-#    libqcomfm_jni \
-#    qcom.fmradio \
-#    FMRecord \
-#    qcom.fmradio.xml
->>>>>>> f3d8e0defdc8d89e7e5f82a785ff314dbfb64ea5
 
 # LOWI
 PRODUCT_COPY_FILES += \
@@ -179,11 +159,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-<<<<<<< HEAD
     lights.msm8974
-=======
-    lights.msm8974   
->>>>>>> f3d8e0defdc8d89e7e5f82a785ff314dbfb64ea5
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -233,13 +209,8 @@ PRODUCT_PACKAGES += \
     power.msm8974
 
 #enable/disable softkey script
-<<<<<<< HEAD
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/etc/set_softkey.sh:system/bin/set_softkey.sh
-=======
-#PRODUCT_COPY_FILES += \
-#    $(LOCAL_PATH)/etc/set_softkey.sh:system/bin/set_softkey.sh
->>>>>>> f3d8e0defdc8d89e7e5f82a785ff314dbfb64ea5
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -296,7 +267,6 @@ PRODUCT_PACKAGES += \
     com.dsi.ant.antradio_library \
     antradio_app
 
-<<<<<<< HEAD
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
@@ -305,8 +275,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=480 \
     ro.com.android.dataroaming=true
 
-=======
->>>>>>> f3d8e0defdc8d89e7e5f82a785ff314dbfb64ea5
 PRODUCT_PACKAGES += \
     giflib
 
