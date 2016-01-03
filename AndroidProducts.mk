@@ -14,3 +14,4 @@
 # limitations under the License.
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/nx507j.mk
+
