@@ -105,7 +105,6 @@ PRODUCT_PACKAGES += \
 
 # Charger
 PRODUCT_PACKAGES += \
-    charger \
     charger_res_images
 
 # Display
@@ -167,6 +166,7 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
     $(LOCAL_PATH)/etc/media_codecs.xml:system/etc/media_codecs.xml \
+    $(LOCAL_PATH)/etc/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
     $(LOCAL_PATH)/etc/media_profiles.xml:system/etc/media_profiles.xml
 
 # WiFi
@@ -267,14 +267,6 @@ PRODUCT_PACKAGES += \
     com.dsi.ant.antradio_library \
     antradio_app
 
-# Properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.extension_library=libqti-perfd-client.so \
-    persist.radio.apm_sim_not_pwdn=1 \
-    persist.radio.sib16_support=1 \
-    ro.sf.lcd_density=480 \
-    ro.com.android.dataroaming=true
-
 PRODUCT_PACKAGES += \
     giflib
 
@@ -296,6 +288,23 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     LatinIME \
     libjni_latinime
+
+# for perfd
+    rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.default_cdma_sub=0
+
+# LTE, CDMA, GSM/WCDMA
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.default_network=10 \
+    telephony.lteOnCdmaDevice=1 \
+    persist.radio.mode_pref_nv10=1 \
+    ro.telephony.get_imsi_from_sim=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.apm_sim_not_pwdn=1
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
