@@ -1,0 +1,3 @@
+allow thermal-engine sysfs_battery_supply:file { open read };
+allow thermal-engine sysfs_battery_supply:dir search;
+allow thermal-engine self:capability chown;
