@@ -277,7 +277,7 @@
     <bool name="config_animateScreenLights">true</bool>
 
     <!-- Indicate whether closing the lid causes the device to go to sleep and opening
-         it causes the device to wake up. 
+         it causes the device to wake up.
          The default is false.
     <bool name="config_lidControlsSleep">true</bool> -->
 
@@ -352,8 +352,6 @@
          The user is forbidden from setting the brightness below this level. -->
     <integer name="config_screenBrightnessSettingMinimum">3</integer>
 
-    <!-- The duration (in milliseconds) that the radio will scan for a signal
-    when there's no network connection. If the scan doesn't timeout, use zero -->
     <!-- Default screen brightness setting.
          Must be in the range specified by minimum and maximum. -->
     <integer name="config_screenBrightnessSettingDefault">102</integer>
@@ -434,9 +432,6 @@
 
     <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveBatteryLed">true</bool>
-
-    <!-- Does the battery LED support multiple colors? Used to decide if the user can change the colors -->
-    <bool name="config_multiColorBatteryLed">true</bool>
 
     <!-- Disable Manual Network Selection in Global Mode -->
     <string translatable="false" name="prohibit_manual_network_selection_in_gobal_mode">true</string>
