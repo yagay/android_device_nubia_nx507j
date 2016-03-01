@@ -158,10 +158,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     keystore.msm8974
 
-# Keyhandler
- PRODUCT_PACKAGES += \
-     com.cyanogenmod.keyhandler
-
 # Lights
 PRODUCT_PACKAGES += \
     lights.msm8974
@@ -365,6 +361,10 @@ PRODUCT_COPY_FILES += \
 # IO Scheduler
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.io.scheduler=bfq
+
+# Keyhandler
+PRODUCT_PACKAGES += \
+    com.cyanogenmod.keyhandler
 
 PRODUCT_SYSTEM_SERVER_JARS += com.cyanogenmod.keyhandler
 # never dexopt the keyhandler
