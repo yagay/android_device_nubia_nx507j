@@ -200,14 +200,6 @@ TARGET_USES_WCNSS_CTRL := true
 TARGET_USES_QCOM_WCNSS_QMI := true
 TARGET_PROVIDES_WCNSS_QMI := true
 
-# Recovery
-BOARD_SUPPRESS_EMMC_WIPE := true
-BOARD_HAS_NO_SELECT_BUTTON := true
-BOARD_RECOVERY_SWIPE := true
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_USERIMAGES_USE_F2FS := true
-
 # dex-preoptimization to speed up first boot sequence
 WITH_DEXPREOPT := false
 
@@ -217,24 +209,62 @@ SKIP_BOOT_JARS_CHECK := true
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += device/nubia/nx507j/sepolicy
 
-
-
 # Recovery
-#RECOVERY_VARIANT := twrp
+RECOVERY_VARIANT := twrp
 ifneq ($(RECOVERY_VARIANT),twrp)
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/recovery.fstab
 else
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/twrp.fstab
-RECOVERY_GRAPHICS_FORCE_USE_LINELENGTH := true
-DEVICE_RESOLUTION := 1080x1920
-RECOVERY_SDCARD_ON_DATA := true
-# TW_NEW_ION_HEAP := true
-TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
-TW_TARGET_USES_QCOM_BSP := true
-TW_EXTRA_LANGUAGES := true
-TARGET_RECOVERY_QCOM_RTC_FIX := true
-BOARD_SUPPRESS_SECURE_ERASE := true
 endif
+BOARD_VENDOR := zte-qcom
+BOARD_HAS_NO_SELECT_BUTTON := true
+BOARD_SUPPRESS_EMMC_WIPE := true
+BOARD_HAS_LARGE_FILESYSTEM := true
+TARGET_USERIMAGES_USE_EXT4 := true
+BOARD_RECOVERY_HANDLES_MOUNT := true
+TARGET_USERIMAGES_USE_F2FS := true
+BOARD_USES_MMCUTILS := true
+BOARD_RECOVERY_SWIPE := true
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
+
+# TWRP
+TW_THEME := portrait_hdpi
+DEVICE_RESOLUTION := 1080x1920
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TW_FLASH_FROM_STORAGE := true
+BOARD_HAS_NO_REAL_SDCARD := false
+RECOVERY_SDCARD_ON_DATA := true
+TW_NO_USB_STORAGE := false
+TW_INTERNAL_STORAGE_PATH := "/data/media"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
+TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
+TW_MAX_BRIGHTNESS := 100
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/msm_dwc3/f9200000.dwc3/gadget/lun%d/file
+TW_EXTRA_LANGUAGES := true
+TW_DEFAULT_LANGUAGE := zh_CN
+
+#MultiROM config. MultiROM also uses parts of TWRP config
+MR_INPUT_TYPE := type_b
+MR_INIT_DEVICES := $(LOCAL_PATH)/multirom/mr_init_devices.c
+MR_DPI := xhdpi
+#MR_DEVICE_VARIANTS := NX507J
+MR_FSTAB := $(LOCAL_PATH)/multirom/mrom.fstab
+MR_USE_MROM_FSTAB := true
+MR_KEXEC_DTB := true
+MR_INFOS := $(LOCAL_PATH)/multirom/mrom_infos
+MR_DEVICE_HOOKS := $(LOCAL_PATH)/multirom/mr_hooks.c
+MR_DEVICE_HOOKS_VER := 4
+MR_KEXEC_MEM_MIN := 0x04e00000
+MR_DPI_FONT := 216
+MR_PIXEL_FORMAT := "RGB_565"
+MR_CONTINUOUS_FB_UPDATE := true
+
+TARGET_RECOVERY_IS_MULTIROM := true
+
 
 # dex-preoptimization to speed up first boot sequence
 WITH_DEXPREOPT := false
